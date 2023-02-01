@@ -3,7 +3,6 @@ package ui.component;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import ui.pages.AbstractPage;
-import ui.pages.ProductListPage;
 
 public class Size extends AbstractPage {
 
