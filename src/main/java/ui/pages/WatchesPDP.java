@@ -27,7 +27,7 @@ public class WatchesPDP extends AbstractPage{
     }
 
     public String getWatchName(){
-        return watchName.getAttribute("data-product-name").toUpperCase(Locale.ROOT);
+        return watchName.getAttribute("data-product-name");
     }
 
     public int getWatchSize(){
@@ -42,7 +42,6 @@ public class WatchesPDP extends AbstractPage{
 
     public boolean isSiseBtwRange( int actualS, Size size){
         boolean isBtwRange = true;
-            isBtwRange=true;
             String sizeExpected = size.getValue().replace("m", "").replace(" ", "");
             String values[] = sizeExpected.split("-");
         System.out.println("min"+values[0]+" "+"max"+values[1]);

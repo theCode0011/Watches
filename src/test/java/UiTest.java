@@ -18,17 +18,17 @@ public class UiTest extends CommonActions {
     homePage.acceptPopup();
     Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened");
     ProductListPage productListPage =homePage.getCatalogMenu().openWatchSubcategory().clickWatchSubcategoryBtn(WatchesSubcat.PILOTS_WATCHES);
-    Assert.assertTrue(productListPage.isPageOpened());
+    Assert.assertTrue(productListPage.isPageOpened(), "Product list page is not opened");
     ProductItem prodItem = productListPage.getProductItemByIndex(30);
     String watchNamePLP =prodItem.getTitle();
     WatchesPDP watchesPDP =prodItem.clickItem();
-    Assert.assertTrue(watchesPDP.isPageOpened());
+    Assert.assertTrue(watchesPDP.isPageOpened(), "Watches PDP is not opened");
     String watchNamePDP = watchesPDP.getWatchName();
     Assert.assertTrue(watchNamePLP.equalsIgnoreCase(watchNamePDP),"titles are not equals");
 }
 
 @Test
-    public void isSizeBtwRange(){
+    public void isSelectedSizeMatchProduct(){
     HomePage homePage = new HomePage(driver);
     homePage.open();
     homePage.acceptPopup();
